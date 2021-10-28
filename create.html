@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Añadir nuevo producto</title>
+</head>
+<body>
+    <!--navegador-->
+    <header>
+        <a href="index.html" class="logo">Logo</a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="create.html">Crear</a></li>
+        </ul>
+    </header>
+    <!--formulario para agregar nuevo producto-->
+    <article>
+        <form class = "box" action="" method="post">
+            <h1>Creación de nuevo producto</h1>
+            <input type="text" placeholder="Ingrese la marca del producto">
+            <input type="text" placeholder="Ingrese el modelo del producto">
+            <input type="number" placeholder="Ingrese el precio del producto">
+            <input type="submit" value="Crear">
+        </form>
+    </article>
+    
+
+
+
+
+
+
+
+    <!--Scrolling effect: activado al hacer scroll en la página-->
+    <script>
+        window.addEventListener("scroll",function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+    </script>
+</body>
+</html>

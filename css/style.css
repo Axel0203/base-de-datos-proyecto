@@ -1,0 +1,207 @@
+/*Fuente de texto*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+/*Variables de colores*/
+:root
+{
+    --black: rgba(24, 24, 24, 1);
+    --white: rgba(240, 240, 240, 1);
+    --grad: rgba(180, 202, 240, 1);
+    --header: rgba(75, 85, 102, 1);
+    --headerfoot: rgba(36, 41, 50, 1);
+    --bgtable: rgba(136, 154, 186, 1);
+    --hovertable: rgba(100, 144, 220, 1);
+    --form: rgba(106, 195, 238, 1);
+}
+/*General*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    background: var(--black);
+    /*min-height: 200vh;*/
+}
+/*Clase agregada para el efecto de scrolling con Javascript*/
+header.sticky
+{
+    padding: 5px 100px;
+    background: var(--white);
+}
+/*Estilos del banner*/
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 10000;
+}
+header .logo
+{
+    position: relative;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--white);
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    padding: 5px 20px;
+    border-radius: 40px;
+}
+header ul li a:hover
+{
+    background: var(--white);
+    color: var(--black);
+}
+
+header.sticky .logo,
+header.sticky ul li a
+{
+    color: var(--black);
+}
+header.sticky ul li a:hover
+{
+    background: var(--black);
+    color: var(--white);
+}
+/*Cuerpo de la página*/
+article
+{
+    margin: 150px auto;
+    width: 1200px;
+}
+
+/*Tabla de productos*/
+table
+{
+    background-color: var(--bgtable);
+    border-collapse: collapse;
+    width: 100%;
+}
+th
+{
+    /*border: solid 1px var(--white);*/
+    padding: 20px;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    color: var(--white);
+    text-align: center;
+}
+td
+{
+    /*border: solid 1px var(--white);*/
+    padding: 20px;
+    color: var(--black);
+    text-align: center;
+    font-size: 1.25em;
+}
+thead
+{
+    background-color: var(--header);
+    border-bottom: solid 5px var(--headerfoot);
+    color: var(--black);
+}
+tr:nth-child(even){
+    background-color: var(--grad);
+}
+tr:hover td{
+    background-color: var(--hovertable);
+    color: var(--white);
+    transition: 0.4s;
+    font-size: 1.5em;
+}
+
+/*Formulario de productos*/
+/*La clase ".box" es donde se encuentra el formulario*/
+.box
+{
+    width: 1000px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--form);
+    text-align: center;
+}
+.box h1
+{
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 2em;
+}
+.box input[type = "text"], .box input[type = "number"]
+{
+    font-size: 1.35em;
+    border: 0;
+    background: var(--white);
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid var(--headerfoot);
+    padding: 14px 10px;
+    width: 400px;
+    outline: none;
+    color: var(--black);
+    border-radius: 25px;
+    transition: 0.4s;
+}
+.box input[type = "text"]:focus, .box input[type = "number"]:focus
+{
+    width: 800px;
+    border-color: var(--hovertable);
+}
+.box input[type = "submit"]
+{
+    font-size: 1.35em;
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid var(--headerfoot);
+    padding: 14px 40px;
+    outline: none;
+    color: var(--black);
+    border-radius: 25px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.box input[type = "submit"]:hover
+{
+    background: var(--headerfoot);
+    color: var(--white);
+}
